@@ -1,0 +1,214 @@
+scratch_card:
+  id: suspicious_dirt
+  permissions:
+    show_in_list_gui: default.suspicious_dirt
+    use: default.suspicious_dirt
+  name: "&6Suspicious Dirt"
+  lore:
+    - "&6&lMay contain some old stuff"
+    - "&7(hold right click to dig)"
+  material: DIRT
+  glow: true
+  needed_to_win: 1
+  needed_scratch_percentage: 30
+  win_chance: 20
+  cursor:
+    speed: 2
+    pressed_sound:
+      name: DIG_SAND
+      volume: 3
+      pitch: 0.9
+      interval_ticks: 5
+  icons:
+    icon_1:
+      x: 56
+      y: 45
+    icon_2:
+      x: 32
+      y: 82
+    icon_3:
+      x: 80
+      y: 82
+  win_actions:
+    win_effect_block_break:
+      always_execute: true
+      execute_instantly: true
+      play_loop_sound_dirt:
+        name: "DIG_GRAVEL"
+        volume: 1
+        pitch: 1
+        delay: 0
+        interval: 3
+        times: 7
+      play_sound_break:
+        name: "BLOCK_GRAVEL_BREAK"
+        volume: 1
+        pitch: 1
+        delay: 20
+      play_sound_drop_effect:
+        name: "ENTITY_PLAYER_ATTACK_CRIT"
+        volume: 1
+        pitch: 2
+        delay: 22
+    win_effect_levelup_sound:
+      always_execute: true
+      execute_instantly: false
+      play_sound_1:
+        name: "ENTITY_PLAYER_LEVELUP"
+        volume: 1
+        pitch: 1
+    group1:
+      chance: 50
+      item_1:
+        name: DIAMOND_SWORD
+        amount: 1
+        damage: 1000
+      send_message:
+        message: "&aYou found &bdamaged Diamond Sword x1 &arestoring a &6Suspicious Dirt!"
+      play_sound_1:
+        name: "ENTITY_ITEM_PICKUP"
+        volume: 1
+        pitch: 1
+    group2:
+      chance: 50
+      item_1:
+        name: DIAMOND_CHESTPLATE
+        amount: 1
+        damage: 120
+      send_message:
+        message: "&aYou found &bdamaged Diamond Chestplate x1 &arestoring a &6Suspicious Dirt!"
+      play_sound_1:
+        name: "ENTITY_ITEM_PICKUP"
+        volume: 1
+        pitch: 1
+    group3:
+      chance: 50
+      item_1:
+        name: DIAMOND_SWORD
+        amount: 1
+        damage: 100
+      send_message:
+        message: "&aYou found &bslightly damaged Diamond Sword x1 &arestoring a &6Suspicious Dirt!"
+      play_sound_1:
+        name: "ENTITY_ITEM_PICKUP"
+        volume: 1
+        pitch: 1
+    group4:
+      chance: 50
+      item_1:
+        name: BOW
+        amount: 1
+        damage: 15
+      send_message:
+        message: "&aYou found &bslightly damaged Bow x1 &arestoring a &6Suspicious Dirt!"
+      play_sound_1:
+        name: "ENTITY_ITEM_PICKUP"
+        volume: 1
+        pitch: 1
+  lose_actions:
+    win_effect_block_break:
+      always_execute: true
+      execute_instantly: true
+      play_loop_sound_dirt:
+        name: "DIG_GRAVEL"
+        volume: 1
+        pitch: 1
+        delay: 0
+        interval: 3
+        times: 7
+      play_sound_break:
+        name: "ENTITY_ITEM_BREAK"
+        volume: 1
+        pitch: 0.9
+        delay: 20
+    first_group:
+      chance: 100
+      item:
+        name: DIRT
+        amount: 1
+      send_message:
+        message: "&c This &6Suspicious Dirt &chad nothing inside..."
+  win_anim:
+    frames:
+    - anim (1)|x6
+    - anim (2)
+    - anim (3)
+    - anim (4)
+    - anim (5)
+    - anim (6)
+    - anim (7)
+    - anim (8)
+    - anim (9)
+    - anim (10)
+    - anim (11)
+    - anim (12)
+    - anim (13)
+    - anim (14)
+    - anim (15)
+    - anim (16)
+    - anim (17)
+    - anim (18)
+    - anim (19)
+    - anim (20)
+    - anim (21)
+    - anim (22)
+    - anim (23)
+    - anim (24)
+    - anim (25)
+    - anim (26)
+    - anim (27)
+    - anim (28)
+    - anim (29)
+    - anim (30)
+    - anim (31)
+    - anim (32)
+    - anim (33)
+    - anim (34)
+    - anim (35)
+    - anim (36)
+    - anim (37)
+  lose_anim:
+    frames:
+    - anim (1)
+    - anim (2)
+    - anim (3)
+    - anim (4)
+    - anim (5)
+    - anim (6)
+    - anim (7)
+    - anim (8)
+    - anim (9)
+    - anim (10)
+    - anim (11)
+    - anim (12)
+    - anim (13)
+    - anim (14)
+    - anim (15)
+    - anim (16)
+    - anim (17)
+    - anim (18)
+    - anim (19)
+    - anim (20)
+    - anim (21)
+    - anim (22)
+    - anim (23)
+    - anim (24)
+    - anim (25)
+    - anim (26)
+    - anim (27)
+    - anim (28)
+    - anim (29)
+    - anim (30)
+    - anim (31)
+    - anim (32)
+    - anim (33)
+loots:
+  blocks:
+    dirt:
+      type: DIRT
+      items:
+        suspicious_dirt_1:
+          item: suspicious_dirt
+          min_amount: 1
+          max_amount: 1
+          chance: 20

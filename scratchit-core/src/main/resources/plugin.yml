@@ -1,0 +1,42 @@
+name: ScratchIt
+main: dev.lone.scratchit.Main
+version: ${project.version}
+prefix: ScratchIt
+authors:
+    - LoneDev
+api-version: 1.13
+website: devs.beer
+depend:
+  - LoneLibs
+  - ProtocolLib
+softdepend:
+  - ItemsAdder
+  - PlaceholderAPI
+  - WorldGuard
+  - ViaVersion
+commands:
+  scratchit:
+    description: Main command
+    usage: /<command> <action>
+permissions:
+  scratchit.user.*:
+    description: Allows to use the user subcommands of the base command "/scratchit"
+    children:
+      scratchit.user.list:
+        description: Allows to open the cards list with "/scratchit list"
+  scratchit.admin.*:
+    description: Allows to use the admin subcommands of the base command "/scratchit"
+    children:
+      scratchit.admin.config:
+        description: Utility command
+        children:
+          scratchit.admin.config.reload:
+            description: Reload configurations
+          scratchit.admin.config.AutoListAnimationFiles:
+            description: Generates list of animation files, useful to automate this boring task
+          scratchit.admin.config.create:
+            description: Create a new card configuration and edit it
+      scratchit.admin.get:
+        description: Get a card using "/scratchit get <card>" and in the GUI "/scratchit list"
+      scratchit.admin.give:
+        description: Give a card using "/scratchit give <player> <card>"

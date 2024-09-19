@@ -1,0 +1,179 @@
+scratch_card:
+  id: template
+  permissions:
+    show_in_list_gui: default.template
+    use: default.template
+  name: "&6Rename Me!"
+  lore:
+    - "&7EDIT ME!"
+    - "&7(hold right click to scratch)"
+  material: PAPER
+  glow: true
+  needed_to_win: 3
+  needed_scratch_percentage: 5
+  win_chance: 30
+  cursor:
+    speed: 1.2
+    pressed_sound:
+      name: DIG_SAND
+      volume: 3
+      pitch: 0.9
+      interval_ticks: 5
+  icons:
+    icon_1:
+      x: 20
+      y: 64
+    icon_2:
+      x: 56
+      y: 64
+    icon_3:
+      x: 92
+      y: 64
+    icon_4:
+      x: 20
+      y: 99
+    icon_5:
+      x: 56
+      y: 99
+    icon_6:
+      x: 92
+      y: 99
+  win_actions:
+    win_effect_chest_open:
+      always_execute: true
+      execute_instantly: true
+      play_sound_1:
+        name: "BLOCK_CHEST_OPEN"
+        volume: 1
+        pitch: 1
+        delay: 7
+    win_effect_firework_sound:
+      always_execute: true
+      execute_instantly: false
+      play_sound_1:
+        name: "FIREWORK_LAUNCH"
+        volume: 1
+        pitch: 1
+      play_sound_2:
+        name: "FIREWORK_LARGE_BLAST"
+        volume: 1
+        pitch: 1
+        delay: 20
+      play_sound_3:
+        name: "FIREWORK_TWINKLE"
+        volume: 1
+        pitch: 1
+        delay: 25
+    first_group:
+      chance: 5
+      item_1:
+        name: DIAMOND
+        amount: 3
+      send_message:
+        message: "&b{player} &awon &bDiamonds x3 &ausing a &6Scratch and Win &ascratchcard!"
+        broadcast: WORLD
+      play_sound_1:
+        name: "ENTITY_ITEM_PICKUP"
+        volume: 1
+        pitch: 1
+    second_group:
+      chance: 20
+      item_1:
+        name: EMERALD
+        amount: 16
+      item_2:
+        name: LAPIS_LAZULI
+        amount: 32
+      play_sound_1:
+        name: "ENTITY_ITEM_PICKUP"
+        volume: 1
+        pitch: 1
+      play_sound_2:
+        name: "ENTITY_ITEM_PICKUP"
+        volume: 1
+        pitch: 1
+        delay: 2
+      send_message:
+        message: "&aYou won &bEmerald x16 &aand &bLapis Lazuli x32 &ausing a &6Scratch and Win &ascratchcard!"
+    third:
+      chance: 30
+      item_1:
+        name: GRASS_BLOCK
+        amount: 32
+      play_sound_1:
+        name: "ENTITY_ITEM_PICKUP"
+        volume: 1
+        pitch: 1
+      send_message:
+        message: "&aYou won &bGrass x32 &ausing a &6Scratch and Win &ascratchcard!"
+    another_group:
+      chance: 10
+      item_1:
+        name: QUARTZ
+        amount: 32
+      play_sound_1:
+        name: "ENTITY_ITEM_PICKUP"
+        volume: 1
+        pitch: 1
+      send_message:
+        message: "&aYou won &bQuartz x32 &ausing a &6Scratch and Win &ascratchcard!"
+    saddles:
+      chance: 10
+      item_1:
+        name: SADDLE
+        amount: 1
+      item_2:
+        name: NAME_TAG
+        amount: 3
+      play_sound_1:
+        name: "ENTITY_ITEM_PICKUP"
+        volume: 1
+        pitch: 1
+      play_sound_2:
+        name: "ENTITY_ITEM_PICKUP"
+        volume: 1
+        pitch: 1
+        delay: 2
+      send_message:
+        message: "&aYou won &bSaddle x1 &aand &bName Tag x3 &ausing a &6Scratch and Win &ascratchcard!"
+  lose_actions:
+    lose_effect_explosion:
+      always_execute: true
+      execute_instantly: true
+      play_sound_1:
+        name: "ENTITY_TNT_PRIMED"
+        volume: 1
+        pitch: 1
+      play_sound_2:
+        name: "ENTITY_GENERIC_EXPLODE"
+        volume: 1
+        pitch: 1
+        delay: 15
+    first_group:
+      chance: 100
+      item_1:
+        name: COAL
+        amount: 1
+      play_sound_1:
+        name: "ENTITY_ITEM_PICKUP"
+        volume: 1
+        pitch: 0.8
+      send_message:
+        message: "&7You won Coal x1 using a &6Scratch and Win &7scratchcard!"
+  win_anim:
+    frames:
+      - 0|x10
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+  lose_anim:
+    frames:
+      - 0|x17
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6

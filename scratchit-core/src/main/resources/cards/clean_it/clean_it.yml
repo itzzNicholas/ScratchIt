@@ -1,0 +1,291 @@
+scratch_card:
+  id: clean_it
+  permissions:
+    show_in_list_gui: default.clean_it
+    use: default.clean_it
+  name: '&bClean It!'
+  lore:
+  - Clean the glass,
+  - it may break sometimes!
+  - '&7(hold right click to clean)'
+  material: GLASS
+  glow: true
+  needed_to_win: 1
+  needed_scratch_percentage: 20
+  win_chance: 30
+  eraser:
+    particles: false
+  cursor:
+    speed: 1.5
+    pressed_sound:
+      name: DIG_SAND
+      volume: 1
+      pitch: 2
+      interval_ticks: 5
+  win_actions:
+    win_effect_levelup_sound:
+      always_execute: true
+      execute_instantly: false
+      play_sound_1:
+        name: "ENTITY_PLAYER_LEVELUP"
+        volume: 1
+        pitch: 1
+    first_group:
+      chance: 5
+      item_1:
+        name: SPONGE
+        amount: 2
+      send_message:
+        message: '&b{player} &awon Sponge x2 using a &bClean It! &ascratchcard!'
+        broadcast: WORLD
+      play_sound_1:
+        name: ENTITY_ITEM_PICKUP
+        volume: 1
+        pitch: 1
+    second_group:
+      chance: 20
+      item_1:
+        name: GLASS
+        amount: 16
+      item_2:
+        name: GLASS_PANE
+        amount: 16
+      play_sound_1:
+        name: ENTITY_ITEM_PICKUP
+        volume: 1
+        pitch: 1
+      play_sound_2:
+        name: ENTITY_ITEM_PICKUP
+        volume: 1
+        pitch: 1
+        delay: 2
+      send_message:
+        message: '&aYou won Glass x16 and Glass Pane x16 using a &bClean It!
+          &ascratchcard!'
+  lose_actions:
+    lose_effect_explosion:
+      always_execute: true
+      execute_instantly: true
+      play_sound_1:
+        name: BLOCK_GLASS_BREAK
+        volume: 1
+        pitch: 1
+    first_group:
+      chance: 100
+      item_1:
+        name: GLASS
+        amount: 1
+      play_sound_1:
+        name: ENTITY_ITEM_PICKUP
+        volume: 1
+        pitch: 0.8
+      send_message:
+        message: '&7You won Glass x1 using a &bClean It! &7scratchcard!'
+  lose_anim:
+    static_background_duration: 20
+loots:
+  blocks:
+    GLASS:
+      type: GLASS
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    GLASS_PANE:
+      type: GLASS_PANE
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    BLACK_STAINED_GLASS:
+      type: BLACK_STAINED_GLASS
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    BLACK_STAINED_GLASS_PANE:
+      type: BLACK_STAINED_GLASS_PANE
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    BLUE_STAINED_GLASS:
+      type: BLUE_STAINED_GLASS
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    BLUE_STAINED_GLASS_PANE:
+      type: BLUE_STAINED_GLASS_PANE
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    BROWN_STAINED_GLASS:
+      type: BLACK_STAINED_GLASS
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    BROWN_STAINED_GLASS_PANE:
+      type: BROWN_STAINED_GLASS_PANE
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    CYAN_STAINED_GLASS:
+      type: CYAN_STAINED_GLASS
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    CYAN_STAINED_GLASS_PANE:
+      type: CYAN_STAINED_GLASS_PANE
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    GRAY_STAINED_GLASS:
+      type: GRAY_STAINED_GLASS
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    GRAY_STAINED_GLASS_PANE:
+      type: GRAY_STAINED_GLASS_PANE
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    GREEN_STAINED_GLASS:
+      type: GREEN_STAINED_GLASS
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    GREEN_STAINED_GLASS_PANE:
+      type: GREEN_STAINED_GLASS_PANE
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    LIGHT_BLUE_STAINED_GLASS:
+      type: LIGHT_BLUE_STAINED_GLASS
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    LIGHT_BLUE_STAINED_GLASS_PANE:
+      type: LIGHT_BLUE_STAINED_GLASS_PANE
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    LIGHT_GRAY_STAINED_GLASS:
+      type: LIGHT_GRAY_STAINED_GLASS
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    LIGHT_GRAY_STAINED_GLASS_PANE:
+      type: LIGHT_GRAY_STAINED_GLASS_PANE
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    LIME_STAINED_GLASS:
+      type: LIME_STAINED_GLASS
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    LIME_STAINED_GLASS_PANE:
+      type: LIME_STAINED_GLASS_PANE
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    MAGENTA_STAINED_GLASS:
+      type: MAGENTA_STAINED_GLASS
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    MAGENTA_STAINED_GLASS_PANE:
+      type: MAGENTA_STAINED_GLASS_PANE
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    ORANGE_STAINED_GLASS:
+      type: ORANGE_STAINED_GLASS
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    ORANGE_STAINED_GLASS_PANE:
+      type: ORANGE_STAINED_GLASS_PANE
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    PINK_STAINED_GLASS:
+      type: PINK_STAINED_GLASS
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    PINK_STAINED_GLASS_PANE:
+      type: PINK_STAINED_GLASS_PANE
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    PURPLE_STAINED_GLASS:
+      type: PURPLE_STAINED_GLASS
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    PURPLE_STAINED_GLASS_PANE:
+      type: PURPLE_STAINED_GLASS_PANE
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    RED_STAINED_GLASS:
+      type: RED_STAINED_GLASS
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    RED_STAINED_GLASS_PANE:
+      type: RED_STAINED_GLASS_PANE
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    WHITE_STAINED_GLASS:
+      type: WHITE_STAINED_GLASS
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    WHITE_STAINED_GLASS_PANE:
+      type: WHITE_STAINED_GLASS_PANE
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    YELLOW_STAINED_GLASS:
+      type: YELLOW_STAINED_GLASS
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20
+    YELLOW_STAINED_GLASS_PANE:
+      type: YELLOW_STAINED_GLASS_PANE
+      items:
+        clean_it:
+          item: clean_it
+          chance: 20

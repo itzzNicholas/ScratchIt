@@ -1,0 +1,70 @@
+scratch_card:
+  id: shearing_sheep
+  permissions:
+    show_in_list_gui: default.shearing_sheep
+    use: default.shearing_sheep
+  name: '&bShearing the Sheep!'
+  lore:
+  - '&7(hold right click to shear)'
+  material: WHITE_WOOL
+  glow: true
+  needed_scratch_percentage: 70
+  win_chance: 100
+  eraser:
+    particles: true
+  cursor:
+    speed: 2
+    pressed_sound:
+      name: SHEEP_SHEAR
+      volume: 1
+      pitch: 1
+      interval_ticks: 5
+  win_actions:
+    win_sound:
+      always_execute: true
+      execute_instantly: true
+      play_sound_1:
+        name: ENTITY_SHEEP_SHEAR
+        volume: 1
+        pitch: 1
+      play_sound_2:
+        name: ENTITY_SHEEP_AMBIENT
+        volume: 1
+        pitch: 1
+        delay: 5
+    first_group:
+      chance: 100
+      item_1:
+        name: WHITE_WOOL
+        amount: 4
+      send_message:
+        message: '&aYou obtained &bWool x4 &ashearing this sheep!'
+      play_sound_1:
+        name: ENTITY_ITEM_PICKUP
+        volume: 1
+        pitch: 1
+  win_anim:
+    frames:
+    - anim_014
+    - anim_015
+    - anim_017
+    - anim_019
+    - anim_021
+    - anim_023
+    - anim_025
+    - anim_027
+    - anim_029
+    - anim_031
+    - anim_033
+    - anim_035
+    - anim_037
+    - anim_038
+    - anim_110|x20
+loots:
+  mobs:
+    SHEEP:
+      type: SHEEP
+      items:
+        shearing_sheep:
+          item: shearing_sheep
+          chance: 10

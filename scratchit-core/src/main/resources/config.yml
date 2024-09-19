@@ -1,0 +1,27 @@
+lang: en
+prefix: "[ScratchIt] "
+graphics:
+  fix_semitransparent_pixels: true
+  viaversion:
+    v1_8: true
+    v1_12: true
+    v1_16: true
+debug:
+  log-result-prize-chance: false
+gui:
+  list:
+    background: GRAY_STAINED_GLASS_PANE
+    button_get_item: CHEST
+    button_back: RED_STAINED_GLASS_PANE
+    button_next_page: ARROW
+    button_prev_page: SPIDER_EYE
+    button_create_item: BLUE_STAINED_GLASS_PANE
+  item_info:
+    background: PURPLE_STAINED_GLASS_PANE
+    button_open_online_editor: CYAN_STAINED_GLASS_PANE
+cards:
+  usage_cooldown_ticks: 20
+  cancel_scratching_methods:
+    item_swap_F: true
+    drop: true
+    shift: true

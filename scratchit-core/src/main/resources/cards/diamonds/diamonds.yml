@@ -1,0 +1,187 @@
+scratch_card:
+  id: diamonds
+  permissions:
+    show_in_list_gui: default.diamonds
+    use: default.diamonds
+  name: "&bMine It!"
+  lore:
+    - "&6&lWin good prices!"
+    - "Find the &bDiamond"
+    - "&7(hold right click to dig)"
+  material: STONE
+  glow: true
+  needed_to_win: 1
+  win_chance: 20
+  cursor:
+    speed: 1.5
+    pressed_sound:
+      name: STEP_STONE
+      volume: 3
+      pitch: 0.9
+      interval_ticks: 5
+  icons:
+    icon_1:
+      x: 56
+      y: 45
+    icon_2:
+      x: 32
+      y: 82
+    icon_3:
+      x: 80
+      y: 82
+  win_actions:
+    win_effect_block_break:
+      always_execute: true
+      execute_instantly: true
+      play_loop_sound_stone:
+        name: "DIG_STONE"
+        volume: 1
+        pitch: 1
+        delay: 0
+        interval: 3
+        times: 7
+      play_sound_break:
+        name: "BLOCK_STONE_BREAK"
+        volume: 1
+        pitch: 1
+        delay: 20
+    win_effect_levelup_sound:
+      always_execute: true
+      execute_instantly: false
+      play_sound_1:
+        name: "ENTITY_PLAYER_LEVELUP"
+        volume: 1
+        pitch: 1
+    first_group:
+      chance: 45
+      item_1:
+        name: DIAMOND
+        amount: 1
+      item_2:
+        name: LAPIS_LAZULI
+        amount: 4
+      send_message:
+        message: "&aYou won &bDiamond x1 &aand &bLapis Lazuli x4 &ausing a &bMine It! &ascratchcard!"
+      play_sound_1:
+        name: "ENTITY_ITEM_PICKUP"
+        volume: 1
+        pitch: 1
+    second:
+      chance: 20
+      item_1:
+        name: DIAMOND
+        amount: 4
+      item_2:
+        name: LAPIS_LAZULI
+        amount: 8
+      send_message:
+        message: "&aYou won &bDiamond x4 &aand &bLapis Lazuli x8 &ausing a &bMine It! &ascratchcard!"
+      play_sound_1:
+        name: "ENTITY_ITEM_PICKUP"
+        volume: 1
+        pitch: 1
+    diamond16:
+      chance: 5
+      item_1:
+        name: DIAMOND
+        amount: 16
+      item_2:
+        name: LAPIS_LAZULI
+        amount: 32
+      send_message:
+        message: "&aYou won &bDiamond x16 &aand &bLapis Lazuli x32 &ausing a &bMine It! &ascratchcard!"
+      play_sound_1:
+        name: "ENTITY_ITEM_PICKUP"
+        volume: 1
+        pitch: 1
+  lose_actions:
+    lose_effect_block_break:
+      always_execute: true
+      execute_instantly: true
+      play_loop_sound_dirt:
+        name: "DIG_GRAVEL"
+        volume: 1
+        pitch: 1
+        delay: 0
+        interval: 3
+        times: 7
+      play_sound_break:
+        name: "ENTITY_ITEM_BREAK"
+        volume: 1
+        pitch: 0.9
+        delay: 20
+    first_group:
+      chance: 100
+      item_1:
+        name: DIRT
+        amount: 1
+      play_sound_1:
+        name: "ENTITY_ITEM_PICKUP"
+        volume: 1
+        pitch: 1
+  win_anim:
+    shift:
+      x: 0
+      y: 15
+    frames:
+      - anim_4|x6
+      - anim_5|x2
+      - anim_6|x2
+      - anim_7|x2
+      - anim_8|x2
+      - anim_9|x2
+      - anim_10|x2
+      - anim_11|x2
+      - anim_12|x2
+      - anim_13|x2
+      - anim_14|x2
+      - anim_15|x2
+      - anim_16|x2
+      - anim_17|x2
+      - anim_18
+      - anim_19
+      - anim_20
+      - anim_21
+      - anim_22
+      - anim_23
+      - anim_24
+      - anim_25
+      - anim_26
+  lose_anim:
+    shift:
+      x: 0
+      y: 15
+    frames:
+      - anim_4|x6
+      - anim_5|x2
+      - anim_6|x2
+      - anim_7|x2
+      - anim_8|x2
+      - anim_9|x2
+      - anim_10|x2
+      - anim_11|x2
+      - anim_12|x2
+      - anim_13|x2
+      - anim_14|x2
+      - anim_15|x2
+      - anim_16|x2
+      - anim_17|x2
+      - anim_18
+      - anim_19
+      - anim_20
+      - anim_21
+      - anim_22
+      - anim_23
+      - anim_24
+      - anim_25
+      - anim_26
+loots:
+  blocks:
+    DIAMOND_ORE:
+      type: DIAMOND_ORE
+      items:
+        diamonds:
+          item: diamonds
+          min_amount: 1
+          max_amount: 2
+          chance: 30

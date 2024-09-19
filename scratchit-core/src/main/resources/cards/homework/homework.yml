@@ -1,0 +1,126 @@
+scratch_card:
+  id: homework
+  permissions:
+    show_in_list_gui: default.homework
+    use: default.homework
+  name: '&bDo Your Homework!'
+  lore:
+  - You must do your homework
+  - to get a good prize!
+  - '&7(hold right click to write)'
+  material: PAPER
+  glow: true
+  needed_to_win: 8
+  needed_scratch_percentage: 20
+  win_chance: 50
+  eraser:
+    particles: false
+  cursor:
+    speed: 1.5
+    pressed_sound:
+      name: UI_CARTOGRAPHY_TABLE_TAKE_RESULT
+      volume: 1
+      pitch: 1
+      interval_ticks: 4
+  icons:
+    icon_1:
+      x: 20
+      y: 20
+    icon_2:
+      x: 20
+      y: 40
+    icon_3:
+      x: 20
+      y: 60
+    icon_4:
+      x: 20
+      y: 80
+    icon_5:
+      x: 20
+      y: 100
+    icon_6:
+      x: 20
+      y: 120
+    icon_7:
+      x: 20
+      y: 140
+    icon_8:
+      x: 20
+      y: 180
+  win_actions:
+    win_sound:
+      always_execute: true
+      execute_instantly: true
+      play_sound_1:
+        name: "VILLAGER_YES"
+        volume: 1
+        pitch: 1
+    win_effect_levelup_sound:
+      always_execute: true
+      execute_instantly: false
+      play_sound:
+        name: "ENTITY_PLAYER_LEVELUP"
+        volume: 1
+        pitch: 1
+    first_group:
+      chance: 30
+      item_1:
+        name: PAPER
+        amount: 16
+      send_message:
+        message: '&b{player} &awon &bPaper x16 &ausing a &bDo Your Homerwork! &ascratchcard!'
+        broadcast: WORLD
+      play_sound_1:
+        name: ENTITY_ITEM_PICKUP
+        volume: 1
+        pitch: 1
+    second_group:
+      chance: 10
+      item_1:
+        name: BOOK
+        amount: 8
+      play_sound_1:
+        name: ENTITY_ITEM_PICKUP
+        volume: 1
+        pitch: 1
+      send_message:
+        message: '&aYou won &bBook x8 &ausing a &bDo Your Homerwork! &ascratchcard!'
+    group_3:
+      chance: 15
+      item_1:
+        name: INK_SAC
+        amount: 16
+      item_2:
+        name: WRITABLE_BOOK
+        amount: 3
+      play_sound_1:
+        name: ENTITY_ITEM_PICKUP
+        volume: 1
+        pitch: 1
+      send_message:
+        message: '&aYou won &bWritable Book x3 &aand &bInk Sac x16 &ausing a &bDo Your Homerwork! &ascratchcard!'
+    group_4:
+      chance: 25
+      item_1:
+        name: GOLD_INGOT
+        amount: 8
+      play_sound_1:
+        name: ENTITY_ITEM_PICKUP
+        volume: 1
+        pitch: 1
+      send_message:
+        message: '&aYou won &bGold Ingot x8 &ausing a &bDo Your Homerwork! &ascratchcard!'
+  lose_actions:
+    lose_sound:
+      always_execute: true
+      execute_instantly: true
+      play_sound_1:
+        name: VILLAGER_NO
+        volume: 1
+        pitch: 1
+      send_message:
+        message: '&7You won nothing using a &bDo Your Homerwork! &7scratchcard!'
+  win_anim:
+    static_background_duration: 30
+  lose_anim:
+    static_background_duration: 30

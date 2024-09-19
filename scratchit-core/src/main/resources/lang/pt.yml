@@ -1,0 +1,36 @@
+cards_list_title: '&1&lRaspadinhas'
+button_get_item: Receber Item
+button_edit_item: Editar Item
+button_edit_name: Editar Nome
+button_confirm: Confirmar
+button_cancel: Cancelar
+button_back: Voltar
+button_next_page: Proxima Página
+button_prev_page: Página Anterior
+button_create_item: Criar Item
+button_open_online_editor: Abrir Editor Online
+no_permission: '&6Não tens permissão para fazer isso: &7{permission}'
+reloading: '&6A dar reload'
+reloaded: '&aReload feito com sucesso!'
+loading_items: '&6Carregando Items'
+loaded_items: '&aItems Carregados'
+items_still_loading_on_commands: '&6Os items estão a carregar , por favor espera antes de usar este comando'
+items_still_loading_on_usage: '&6O server está a carregar, espera antes de usar este item!'
+card_please_wait_cooldown_global: '&6Por favor espera &7{time} &6antes de usar outra raspadinha!'
+card_please_wait_cooldown: '&6Por favor espera &7{time} &6antes de usar esta raspadinha!'
+recently_attacked: '&6Foste atacado recentemente. Por favor foge antes de usares este item'
+removed_from_config: '&6Este item foi removido / alterado por um admin . Pede a um administrador uma
+  substituição'
+created_card: '&aNova raspadinha criada &7{name}&a. Podes costumizá-la usando este link: &bhttp://ide.plugin.ga/scratchit/'
+card_already_exists: '&6Raspadinha &7{name}&6 já existe!'
+extracting_card_template: '&6Extraindo template de raspadinha'
+cant_use_this_item_in_this_region: '&6Não podes usar esse item nessa região.'
+click_here_open_editor: '>> Clica aqui para abrir o editor online <<'
+changes_applied: '&aMudanças Aplicadas!'
+changes_apply_error: '&cUm erro ocurreu ao aplicar mudanças.'
+wrong_command_usage: '&cComando não existe ou está errado'
+specify_valid_card_name: '&6Por favor indica um nome de raspadinha válido'
+specify_anim_type: '&6Por favor indica um tipo de animação válido (win_anim, lose_anim)'
+anim_folder_doesnt_exists: '&6Pasta das Animações &b{name} &6não existe!'
+press_to_cancel_usage: " \n&6Clica {methods} para parar de usar este item.\n "
+cancelled_usage: " \n&cRaspadinha Cancelada.\n "

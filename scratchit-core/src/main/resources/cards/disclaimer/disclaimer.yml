@@ -1,0 +1,37 @@
+scratch_card:
+  id: disclaimer
+  permissions:
+    show_in_list_gui: default.disclaimer
+    use: default.disclaimer
+  name: '&bGames Disclaimer'
+  lore:
+  - Be sure to read this in order to
+  - start playing the minigames safely
+  - '&7(press right/left click to click)'
+  material: PAPER
+  glow: true
+  needed_scratch_percentage: 1
+  win_chance: 100
+  eraser:
+    particles: false
+  cursor:
+    speed: 1
+    allow_left_click: true
+    pressed_sound:
+      name: UI_BUTTON_CLICK
+      volume: 1
+      pitch: 1
+      interval_ticks: 999999
+  win_actions:
+    accept_sound:
+      always_execute: true
+      execute_instantly: true
+      play_sound:
+        name: "ENTITY_PLAYER_LEVELUP"
+        volume: 1
+        pitch: 1
+        delay: 10
+  win_anim:
+    frames:
+    - anim (1)|x5
+    - anim (2)|x20

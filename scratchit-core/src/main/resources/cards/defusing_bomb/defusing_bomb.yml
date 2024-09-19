@@ -1,0 +1,173 @@
+scratch_card:
+  id: defusing_bomb
+  permissions:
+    show_in_list_gui: default.defusing_bomb
+    use: default.defusing_bomb
+  name: '&bDefuse The Bomb!'
+  lore:
+  - Try to defuse the bomb
+  - '&7(hold right click to cut wires)'
+  material: TNT
+  glow: true
+  needed_scratch_percentage: 1
+  win_chance: 40
+  cursor_speed: 1.5
+  eraser:
+    particles: false
+  cursor:
+    pressed_sound:
+      name: UI_BUTTON_CLICK
+      volume: 1
+      pitch: 1.2
+      interval_ticks: 99999
+  win_actions:
+    win_effect_beep:
+      always_execute: true
+      execute_instantly: true
+      play_sound_beep1:
+        name: BLOCK_NOTE_BLOCK_PLING
+        volume: 1
+        pitch: 2
+        delay: 0
+      play_sound_beep2:
+        name: BLOCK_NOTE_BLOCK_PLING
+        volume: 1
+        pitch: 2
+        delay: 3
+      play_sound_beep3:
+        name: BLOCK_NOTE_BLOCK_PLING
+        volume: 1
+        pitch: 2
+        delay: 6
+      play_sound_beep4:
+        name: BLOCK_NOTE_BLOCK_PLING
+        volume: 1
+        pitch: 2
+        delay: 9
+      play_sound_beep5:
+        name: BLOCK_NOTE_BLOCK_PLING
+        volume: 1
+        pitch: 2
+        delay: 12
+      play_sound_beep6:
+        name: BLOCK_NOTE_BLOCK_PLING
+        volume: 1
+        pitch: 2
+        delay: 15
+    win_effect_levelup_sound:
+      always_execute: true
+      execute_instantly: false
+      play_sound:
+        name: ENTITY_PLAYER_LEVELUP
+        volume: 1
+        pitch: 1
+    group1:
+      chance: 10
+      item_1:
+        name: TNT
+        amount: 6
+      send_message:
+        message: '&b{player} &awon &bTNT x6 &ausing a &bDefuse The Bomb! &ascratchcard!'
+        broadcast: WORLD
+      play_sound_1:
+        name: ENTITY_ITEM_PICKUP
+        volume: 1
+        pitch: 1
+    group2:
+      chance: 5
+      item_1:
+        name: CREEPER_HEAD
+        amount: 1
+      play_sound_1:
+        name: ENTITY_ITEM_PICKUP
+        volume: 1
+        pitch: 1
+      send_message:
+        message: '&aYou won &bCreeper Head x1 &ausing a &bDefuse The Bomb! &ascratchcard!'
+    group_3:
+      chance: 20
+      item_1:
+        name: GUNPOWDER
+        amount: 8
+      play_sound_1:
+        name: ENTITY_ITEM_PICKUP
+        volume: 1
+        pitch: 1
+      send_message:
+        message: '&aYou won &bGunpowder x8 &ausing a &bDefuse The Bomb! &ascratchcard!'
+    group_4:
+      chance: 25
+      item_1:
+        name: FLINT_AND_STEEL
+        amount: 1
+      play_sound_1:
+        name: ENTITY_ITEM_PICKUP
+        volume: 1
+        pitch: 1
+      send_message:
+        message: '&aYou won &bFlint and Steel x1 &ausing a &bDefuse The Bomb! &ascratchcard!'
+  lose_actions:
+    lose_effect_beep:
+      always_execute: true
+      execute_instantly: true
+      play_sound_beep1:
+        name: BLOCK_NOTE_BLOCK_PLING
+        volume: 1
+        pitch: 2
+        delay: 0
+      play_sound_beep2:
+        name: BLOCK_NOTE_BLOCK_PLING
+        volume: 1
+        pitch: 2
+        delay: 3
+      play_sound_beep3:
+        name: BLOCK_NOTE_BLOCK_PLING
+        volume: 1
+        pitch: 2
+        delay: 6
+      play_sound_beep4:
+        name: BLOCK_NOTE_BLOCK_PLING
+        volume: 1
+        pitch: 2
+        delay: 9
+      play_sound_beep5:
+        name: BLOCK_NOTE_BLOCK_PLING
+        volume: 1
+        pitch: 2
+        delay: 12
+      play_sound_beep6:
+        name: BLOCK_NOTE_BLOCK_PLING
+        volume: 1
+        pitch: 2
+        delay: 15
+    lose_effect_explosion:
+      always_execute: true
+      execute_instantly: true
+      play_sound_1:
+        name: ENTITY_TNT_PRIMED
+        volume: 1
+        pitch: 1
+        delay: 15
+      play_sound_2:
+        name: ENTITY_GENERIC_EXPLODE
+        volume: 1
+        pitch: 1
+        delay: 30
+      send_message:
+        message: '&7You won nothing using a &bDefuse The Bomb! &7scratchcard!'
+  win_anim:
+    frames:
+    - anim (1)|x30
+    - anim (1)|x3
+    - anim (2)|x3
+    - anim (3)|x3
+    - anim (4)|x3
+    - anim (5)|x15
+  lose_anim:
+    frames:
+    - start|x30
+    - 0|x2
+    - 1|x2
+    - 2|x2
+    - 3|x2
+    - 4|x2
