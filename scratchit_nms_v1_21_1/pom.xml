@@ -6,7 +6,7 @@
 
     <groupId>dev.lone.scratchit</groupId>
     <artifactId>scratchit_nms_v1_21_1</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.2.0</version>
     <packaging>jar</packaging>
 
     <name>scratchit_nms_1_21_1</name>
@@ -105,7 +105,7 @@
         <dependency>
             <groupId>dev.lone.scratchit</groupId>
             <artifactId>scratchit_nms</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.2.0</version>
         </dependency>
     </dependencies>
 </project>
