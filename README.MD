@@ -2,6 +2,10 @@
 
 A plugin that adds scratch cards to Minecraft servers.
 
+- [Wiki](https://scratchit.devs.beer/)
+- [Issues](https://github.com/PluginBugs/Issues-ScratchIt/issues)
+
+
 ## Compatibility
 
 - Spigot 1.21.1
