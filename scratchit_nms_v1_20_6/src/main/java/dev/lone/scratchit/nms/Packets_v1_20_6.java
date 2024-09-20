@@ -25,7 +25,7 @@ import java.lang.invoke.MethodHandle;
 import java.util.Optional;
 
 @SuppressWarnings("unused")
-public class Packets_v1_21_1 extends Packets
+public class Packets_v1_20_6 extends Packets
 {
     @Override
     public void sendMapPacket(Player player, int mapId, byte[] data)

@@ -1,7 +1,6 @@
 package dev.lone.scratchit.nms;
 
 import io.netty.buffer.Unpooled;
-import net.minecraft.core.Holder;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.protocol.game.*;
 import net.minecraft.server.level.ServerLevel;
@@ -9,33 +8,31 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Interaction;
-import net.minecraft.world.level.saveddata.maps.MapId;
 import net.minecraft.world.level.saveddata.maps.MapItemSavedData;
 import net.minecraft.world.phys.Vec3;
 import org.bukkit.Location;
-import org.bukkit.craftbukkit.CraftWorld;
-import org.bukkit.craftbukkit.entity.CraftPlayer;
-import org.bukkit.craftbukkit.inventory.CraftItemStack;
-import org.bukkit.craftbukkit.potion.CraftPotionEffectType;
+import org.bukkit.craftbukkit.v1_20_R3.CraftWorld;
+import org.bukkit.craftbukkit.v1_20_R3.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_20_R3.inventory.CraftItemStack;
+import org.bukkit.craftbukkit.v1_20_R3.potion.CraftPotionEffectType;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffectType;
 
 import java.lang.invoke.MethodHandle;
-import java.util.Optional;
 
 @SuppressWarnings("unused")
-public class Packets_v1_21_1 extends Packets
+public class Packets_v1_20_4 extends Packets
 {
     @Override
     public void sendMapPacket(Player player, int mapId, byte[] data)
     {
         var packet = new ClientboundMapItemDataPacket(
-                new MapId(mapId),
+                mapId,
                 (byte) 0,
                 false,
-                Optional.empty(),
-                Optional.of(new MapItemSavedData.MapPatch(0, 0, 128, 128, data))
+                null,
+                new MapItemSavedData.MapPatch(0, 0, 128, 128, data)
         );
         var serverPlayer = ((CraftPlayer) player).getHandle();
         serverPlayer.connection.send(packet);
@@ -45,8 +42,8 @@ public class Packets_v1_21_1 extends Packets
     public void sendFakePotion(Player player, PotionEffectType type, byte amplifier, int duration, boolean ambient, boolean visible)
     {
         var packet = new ClientboundUpdateMobEffectPacket(player.getEntityId(), new MobEffectInstance(
-                Holder.direct(CraftPotionEffectType.bukkitToMinecraft(type)), duration, amplifier, ambient, visible
-        ), false);
+                CraftPotionEffectType.bukkitToMinecraft(type), duration, amplifier, ambient, visible
+        ));
         var serverPlayer = ((CraftPlayer) player).getHandle();
         serverPlayer.connection.send(packet);
     }
@@ -56,7 +53,7 @@ public class Packets_v1_21_1 extends Packets
     {
         var packet = new ClientboundRemoveMobEffectPacket(
                 player.getEntityId(),
-                Holder.direct(CraftPotionEffectType.bukkitToMinecraft(type))
+                CraftPotionEffectType.bukkitToMinecraft(type)
         );
         var serverPlayer = ((CraftPlayer) player).getHandle();
         serverPlayer.connection.send(packet);

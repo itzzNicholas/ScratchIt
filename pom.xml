@@ -6,7 +6,7 @@
 
     <groupId>ScratchIt</groupId>
     <artifactId>ScratchIt</artifactId>
-    <version>1.2.0</version>
+    <version>1.2.1</version>
     <packaging>pom</packaging>
 
     <name>ScratchIt</name>
@@ -24,5 +24,8 @@
         <module>scratchit-core</module>
         <module>scratchit_nms</module>
         <module>scratchit_nms_v1_21_1</module>
+        <module>scratchit_nms_v1_20_6</module>
+        <module>scratchit_nms_v1_20_4</module>
+        <module>scratchit_nms_v1_19_4</module>
     </modules>
 </project>
