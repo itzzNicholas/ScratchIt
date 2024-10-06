@@ -60,5 +60,12 @@
             <artifactId>paper-nms</artifactId>
             <version>1.20.6-SNAPSHOT</version>
         </dependency>
+             <!-- https://mvnrepository.com/artifact/com.github.LoneDev6/itemsadder-api -->
+<dependency>
+    <groupId>com.github.LoneDev6</groupId>
+    <artifactId>itemsadder-api</artifactId>
+    <version>3.6.1</version>
+</dependency>
+
     </dependencies>
 </project>
